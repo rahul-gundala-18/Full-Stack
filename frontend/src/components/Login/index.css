@@ -1,0 +1,100 @@
+/* Login form layout and validation states */
+.login {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1rem;
+	background: #f4f7fb;
+}
+
+.login form {
+	width: 100%;
+	max-width: 420px;
+	padding: 2.5rem;
+	border: 1px solid #e4e9f0;
+	border-radius: 14px;
+	background: #fff;
+	box-shadow: 0 12px 35px rgba(31, 45, 61, 0.1);
+}
+
+.login h1,
+.login h2 {
+	margin: 0 0 1.75rem;
+	color: #172b4d;
+	text-align: center;
+	font-size: 1.75rem;
+}
+
+.login label {
+	display: block;
+	margin: 0 0 0.5rem;
+	color: #344563;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.login input[type='email'],
+.login input[type='password'] {
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 1.25rem;
+	padding: 0.8rem 0.9rem;
+	border: 1px solid #cbd5e1;
+	border-radius: 7px;
+	color: #172b4d;
+	background: #fff;
+	font: inherit;
+	outline: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login input::placeholder {
+	color: #94a3b8;
+}
+
+.login input:focus {
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.login input:invalid:not(:placeholder-shown) {
+	border-color: #dc2626;
+}
+
+.login input:valid:not(:placeholder-shown) {
+	border-color: #16a34a;
+}
+
+.login button[type='submit'] {
+	width: 100%;
+	margin-top: 0.25rem;
+	padding: 0.85rem 1rem;
+	border: 0;
+	border-radius: 7px;
+	color: #fff;
+	background: #2563eb;
+	font: inherit;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.2s;
+}
+
+.login button[type='submit']:hover {
+	background: #1d4ed8;
+}
+
+.login button[type='submit']:active {
+	transform: translateY(1px);
+}
+
+.login button[type='submit']:focus-visible {
+	outline: 3px solid rgba(37, 99, 235, 0.35);
+	outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+	.login form {
+		padding: 1.75rem 1.25rem;
+	}
+}
